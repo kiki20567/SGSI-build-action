@@ -20,12 +20,12 @@ jobs:
       - name: Check Configuration
         run: |
           function required () { if ! [[ "$1" ]]; then echo "$2 variable can't be null." && exit 1; fi }
-          required "${{ steps.config.outputs.rom_url }}" "ROM_URL config"https://aachl3db2q6wrcs7zenw3pea6dr3k888.node.ppio.cloud:35675/fsa167af8c.a.bdydns.com/1435501072/Firmware/Flyme/meizu18/9.2.5.2/cn/20211215151006/1b258b36/update.zip?f_ver=v1&max_age=7776000&r=HRMsHgJff2RTCBELOCcxElsKPQcLEH4oWgxMICY0LgAUFT1BNwkpJlBODgMmPDZGTUhhQENLZWUHTgAIYHRzRURWal9EVGV6BVFVSX4kcUJNBWtYXhAgL1QVBkg1LzMaFz0AEgE%2BeloRBggsIi1G&ppiouid=61c68c0ec582cc000129a812df49ed60
-          required "${{ steps.config.outputs.build_type }}" "BUILD_TYPE config"ab
-          required "${{ steps.config.outputs.os_type }}" "OS_TYPE config"sgsi
-          required "${{ steps.config.outputs.zip_name }}" "ZIP_NAME config"18 9.2.5a
+          required "${{ steps.config.outputs.rom_url }}" "ROM_URL config"
+          required "${{ steps.config.outputs.build_type }}" "BUILD_TYPE config"
+          required "${{ steps.config.outputs.os_type }}" "OS_TYPE config"
+          required "${{ steps.config.outputs.zip_name }}" "ZIP_NAME config"
           required "${{ steps.config.outputs.version }}" "VERSION config"
-          required "${{ steps.config.outputs.repack_name }}" "REPACK_NAME config"meizu 18 9.25
+          required "${{ steps.config.outputs.repack_name }}" "REPACK_NAME config"
 
       - name: Cleanup workspace
         uses: rokibhasansagar/slimhub_actions@main
